@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    tty: true
+    init: true
+    volumes:
+      - .:/root/app
+    ports:
+      - 8013:8013
